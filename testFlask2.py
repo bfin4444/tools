@@ -15,7 +15,8 @@ api = Api(app)
 class Hello(Resource):
 
         def get(self):
-                data = {'time': time.strftime("%Y-%m-%dT%H:%M:%S", time.localtime(time.time())), 'data': { 'baseData': { 'dimNames': [ 'sourceName', 'MessageType' ], 'metric': 'oper_item_interface_speed', 'namespace': 'Mfvs_Pleaf_PM_IF_Stats', 'series': [ { 'count': 3, 'dimValues': [ 'cbama22cwp', 'json' ], 'speed': random.randint(1,1000000), 'avg': 500000} ] } }}
+                data = {'Greeting': 'Boo'}
+#                data = {'time': time.strftime("%Y-%m-%dT%H:%M:%S", time.localtime(time.time())), 'data': { 'baseData': { 'dimNames': [ 'sourceName', 'MessageType' ], 'metric': 'oper_item_interface_speed', 'namespace': 'Mfvs_Pleaf_PM_IF_Stats', 'series': [ { 'count': 3, 'dimValues': [ 'cbama22cwp', 'json' ], 'speed': random.randint(1,1000000), 'avg': 500000} ] } }}
                 return jsonify(data)
 
     # Corresponds to POST request
